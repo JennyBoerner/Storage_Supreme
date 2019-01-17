@@ -1,14 +1,14 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Grab all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  // Grab all reminders
+  app.get("/api/add", function(req, res) {
+    db..findAll({}).then(function(dbReminder) {
+      res.json(dbReminder);
     });
   });
 
-  // Create a new example
+  // Creates new 
   app.post("/routes/", function(req, res) {
     db.Example.create(req.body).then(function(dbExample) {
       res.json(dbExample);

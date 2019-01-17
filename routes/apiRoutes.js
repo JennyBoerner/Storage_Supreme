@@ -1,4 +1,4 @@
-var db = require("../models");
+var db = require("../angelsdb");
 
 var express = require('express');
 
@@ -17,10 +17,11 @@ module.exports = function(app) {
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
+  // DESTROY 
+  app.delete("/api/example/:id", function(req, res) {
     db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
       res.json(dbExample);
     });
   });
 };
+

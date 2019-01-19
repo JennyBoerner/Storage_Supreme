@@ -34,7 +34,6 @@ module.exports = function(app) {
       console.log(res);
       res.render("review");
     });
-
   });
 
   // Render 404 page for any unmatched routes

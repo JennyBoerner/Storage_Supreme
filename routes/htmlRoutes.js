@@ -20,9 +20,16 @@ module.exports = function(app) {
 
   app.get("/procurement", function(req, res) {
     // Info needs to be added here to display the databse
+<<<<<<< HEAD
     db.purchase_orders.findAll().then(function(results){
     res.render("procurementall", {
       orders: results
+=======
+    db.purchase_orders.findAll().then(function(results) {
+      res.render("procurementall", {
+        orders: results
+      });
+>>>>>>> 1d9517eab2825e579afcb7c3a459f9b649eb4539
     });
   });
   });

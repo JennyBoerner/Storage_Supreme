@@ -2,14 +2,13 @@
   "development": {
     "username": "root",
 
-<<<<<<< HEAD
-    "password": "Rocket13&",
-=======
 
 
     "password": "sqlpassword",
->>>>>>> f295c19d32b320a703c38d148e4c6f20cc58084c
 
+
+
+    
 
     "database": "angelsdb",
     "host": "localhost",

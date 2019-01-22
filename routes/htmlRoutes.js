@@ -19,21 +19,25 @@ module.exports = function(app) {
   });
 
   app.get("/procurement", function(req, res) {
-    db.purchase_orders.findAll({}).then(function() {
-      console.log(res);
-      res.render("procurement");
+    // Info needs to be added here to display the databse
+    db.purchase_orders.findAll().then(function(results) {
+      res.render("procurementall", {
+        orders: results
+      });
     });
   });
 
   app.get("/review", function(req, res) {
-    db.purchase_orders.findAll({
-      where: {
-        projectName: req.params.projectName
-      }
-    }).then(function() {
+    db.purchase_orders.findAll({}).then(function(results) {
       console.log(res);
-      res.render("review");
+      res.render("review", {
+        orders: results
+      });
     });
+  });
+
+  app.get("/mgmt", function(req, res) {
+    res.render("mgmtPortal");
   });
 
   // Render 404 page for any unmatched routes
